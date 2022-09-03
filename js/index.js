@@ -51,8 +51,8 @@ $(document).ready(function () {
       nav: false,
       dots: false,
       responsive: {
-        // breakpoint from 480 up
-        480: {
+        // breakpoint from 0 up
+        0: {
           items: 1,
         },
         // breakpoint from 768 up

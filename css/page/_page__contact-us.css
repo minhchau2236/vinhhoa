@@ -1,0 +1,5 @@
+@media (max-width: 576px) {
+  #page__contact-us .fs-5 {
+    font-size: 1rem !important;
+  }
+}
