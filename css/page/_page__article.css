@@ -1,3 +1,6 @@
 #page__article {
   margin-top: 82px;
 }
+.post-content img {
+  max-width: 100%;
+}
