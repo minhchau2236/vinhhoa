@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+  fe-prod:
+    build:
+      context: .
+    healthcheck:
+      test: curl --fail -s http://localhost/health-check || exit 1
+      interval: 1m
+      timeout: 5s
+      retries: 3
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.web_fe_vinhhoa.rule=Host(`vinhhoa.chauchiminh.com`)
+      - traefik.http.routers.web_fe_vinhhoa.entrypoints=websecure
+      - traefik.http.routers.web_fe_vinhhoa.tls.certresolver=myresolver
+    networks:
+      - proxy_network
+networks:
+  proxy_network:
+    external: true
