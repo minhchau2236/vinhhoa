@@ -1,0 +1,22 @@
+.page__menu {
+  margin-top: -2rem;
+  position: relative;
+  z-index: 1;
+}
+.page__menu a:hover {
+  color: #000;
+}
+/*breadcrumb*/
+.breadcrumb-item + .breadcrumb-item::before {
+  color: #fff;
+  content: "|";
+}
+
+@media (min-width: 768px) {
+  .breadcrumb-item + .breadcrumb-item::before {
+    padding-right: 1rem;
+  }
+  .breadcrumb-item + .breadcrumb-item {
+    padding-left: 1rem;
+  }
+}

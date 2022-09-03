@@ -1,0 +1,21 @@
+.page__banner {
+  margin-top: 82px;
+}
+.page__banner--desc {
+  background-color: var(--green-1);
+  padding-bottom: 4rem !important;
+  padding-top: 2rem !important;
+}
+@media (min-width: 992px) {
+  .page__banner--desc {
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 28.13%, #000000 100%);
+  }
+}

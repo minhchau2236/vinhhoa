@@ -1,0 +1,15 @@
+.product__head {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.product__head--text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+}
+
+.product__desc {
+  color: var(--black-50);
+}

@@ -1,0 +1,39 @@
+.testimonial__item {
+  color: #9e9e9e;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding-top: 2rem;
+}
+
+.testimonial__item *,
+.testimonial__item *:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+.testimonial__item figcaption:before {
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border-radius: 50%;
+  content: "";
+  left: 4rem;
+  position: absolute;
+  top: -30px;
+  width: 65px;
+  height: 65px;
+  background: #f7f7fa url(/images/quote.png) no-repeat center;
+  border: 2px solid #fff;
+}
+
+.testimonial__item blockquote {
+  font-style: italic;
+  font-weight: 300;
+  margin: 0 0 20px;
+}
+
+.checked {
+  color: var(--green-2);
+}

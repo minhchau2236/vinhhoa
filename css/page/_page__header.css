@@ -1,0 +1,158 @@
+/* ----------------------------------------------------------------
+	page__header
+-----------------------------------------------------------------*/
+
+.page__header {
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+.page__header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.page__header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+}
+
+.page__header li a:hover,
+.page__header .menu-btn:hover {
+  background-color: #f4f4f4;
+}
+
+.page__header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+/* menu */
+
+.page__header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+/* menu icon */
+
+.page__header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.page__header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+
+.page__header .menu-icon .navicon:before,
+.page__header .menu-icon .navicon:after {
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.page__header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.page__header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.page__header .menu-btn {
+  display: none;
+}
+
+.page__header .menu-btn:checked ~ .menu {
+  max-height: 400px;
+  padding-bottom: 1rem;
+  padding-top: 2rem;
+}
+
+.page__header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.page__header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.page__header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.page__header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.page__header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* lg */
+
+@media (min-width: 992px) {
+  .page__header li {
+    float: left;
+  }
+  .page__header li a {
+    padding: 20px 30px;
+  }
+  .page__header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .page__header .menu-icon {
+    display: none;
+  }
+}
+
+.menu-icon {
+  position: absolute !important;
+  top: 10px;
+  right: 0;
+}
+
+/* progress-bar */
+:root {
+  --height--progress-bar: 0.25rem;
+}
+.progress-container {
+  width: 100%;
+  height: var(--height--progress-bar);
+  background: transparent;
+  position: absolute;
+  bottom: -0.25rem;
+  left: 0;
+}
+
+.progress-bar {
+  height: var(--height--progress-bar);
+  background: var(--green-2);
+  width: 0%;
+}
