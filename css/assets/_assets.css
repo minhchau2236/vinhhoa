@@ -121,7 +121,10 @@ body {
   margin-top: 82px;
 }
 /* layout */
-
+.container-fluid {
+  max-width: 1900px;
+  margin: 0 auto;
+}
 .page__section {
   width: 100%;
   float: left;
